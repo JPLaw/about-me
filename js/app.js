@@ -27,48 +27,100 @@ var pointsCounter = 0;
 // playSports();
 
 
-//Question2: Number question: How many do you think I played?
-function sportsNumberPlayed(){
-  var sportsNumber = prompt('So, now you know that I did in fact play sports back in the day. How many do you think I played?');
-  sportsNumber = parseInt(sportsNumber);
-  if (sportsNumber === 3) {
-    pointsCounter += 1;
-    alert('Good job ' + userName + '! That is correct!');
-  } else {
-    alert('Nice try ' + userName+ '. That is not correct!');
-  }
-  console.log(userName + ' answered ' + sportsNumber + '. The right answer was 3.');
-  console.log('User Guessed this many sports:', sportsNumber); //making sure we're logging user guess
-}
-
-sportsNumberPlayed();
-
-// Array Question: Can you guess which sports I played?
-
-// var guessAttempts = 6;
-
-// while(guessAttempts > 0) {
-
-//   var whichSports = prompt('Can you guess which sports I played?').toLowerCase();
-//   guessAttempts--;
-//   var sportsPlayed = ['water polo', 'soccer', 'swimming'];
-//   var userAnswerRight = false;
-//   for(var i = 0; i < sportsPlayed.length; i++) {
-//     if(whichSports === sportsPlayed[i]) {
-//       userAnswerRight = true;
-//     }
+// //Question2: Number question: How many do you think I played?
+// function sportsNumberPlayed(){
+//   var sportsNumber = prompt('So, now you know that I did in fact play sports back in the day. How many do you think I played?');
+//   sportsNumber = parseInt(sportsNumber);
+//   if (sportsNumber === 3) {
+//     pointsCounter += 1;
+//     alert('Good job ' + userName + '! That is correct!');
+//   } else {
+//     alert('Nice try ' + userName+ '. That is not correct!');
 //   }
-//   if(userAnswerRight === true);
-//   //pointsCounter += 1;
-//   alert('Correct! The possible answers were: water polo, soccer and swimming (although I know you don\'t technically play swimming.');
-//   userAnswerRight = true;
-//   break;
-// } if(guessAttempts > 0) {
-//   alert('That\'s not one. Try again.');
-// } if(guessAttempts === 0){
-//   alert('Well darn. The possible answers were water polo, soccer and swimming. Being from California, I spent a lot of my time outside. And in water apparently.');
+//   console.log(userName + ' answered ' + sportsNumber + '. The right answer was 3.');
+//   console.log('User Guessed this many sports:', sportsNumber); //making sure we're logging user guess
 // }
 
+// sportsNumberPlayed();
+
+//Array Question: Can you guess which sports I played?
+
+// function whichSportsPlayed(){
+//   var guessAttempts = 6;
+
+//   while(guessAttempts > 0) {
+  
+//     var whichSports = prompt('Can you guess one of the sports I played?').toLowerCase();
+//     console.log('User guess for a sport played:', whichSports);
+//     guessAttempts--;
+//     console.log('How many guess attempts are left:', guessAttempts);
+//     var sportsPlayed = ['water polo', 'soccer', 'swimming'];
+//     console.log('Array of possible correct answers for sports played:',sportsPlayed);
+//     var userAnswerRight = false;
+//     for(var i = 0; i < sportsPlayed.length; i++) {
+//       if(whichSports === sportsPlayed[i]) {
+//         userAnswerRight = true;
+//       }
+//     }
+//     if(userAnswerRight === true);
+//     pointsCounter += 1;
+//     alert('Correct! The possible answers were: water polo, soccer and swimming (although I know you don\'t technically play swimming.');
+//     userAnswerRight = true;
+//     break;
+//   } if(guessAttempts > 0) {
+//     alert('That\'s not one. Try again.');
+//   } if(guessAttempts === 0){
+//     alert('Well darn. The possible answers were water polo, soccer and swimming. Being from California, I spent a lot of my time outside. And in water apparently.');
+//   }
+// }
+
+// whichSportsPlayed();
+
+// ************************
+// Edited code turned into a function for the array question above
+// ************************
+
+function whichSportsPlayed(){
+  var guessAttempts = 6;
+
+  while(guessAttempts > 0) {
+  
+    var whichSports = prompt('Can you guess one of the sports I played?').toLowerCase();
+    console.log('User guess for a sport played:', whichSports);
+    guessAttempts--;
+    console.log('How many guess attempts are left:', guessAttempts);
+    var sportsPlayed = ['water polo', 'soccer', 'swimming'];
+    console.log('Array of possible correct answers for sports played:',sportsPlayed);
+    var userAnswerRight = false;
+    for(var i = 0; i < sportsPlayed.length; i++) {
+      if(whichSports === sportsPlayed[i]) {
+        userAnswerRight = true;
+        alert('Correct! The possible answers were: water polo, soccer and swimming (although I know you don\'t technically play swimming).');
+          break;
+        } else {guessAttempts --;
+        alert('That\'s not one. Try again.');}
+      }
+  }
+}
+    
+   
+//     }
+//     if(userAnswerRight === true);
+//     // pointsCounter += 1;
+    
+//     break;
+//   } if(guessAttempts > 0) {
+//     alert('That\'s not one. Try again.');
+//   } if(guessAttempts === 0){
+//     alert('Well darn. The possible answers were water polo, soccer and swimming. Being from California, I spent a lot of my time outside. And in water apparently.');
+//   }
+// }
+
+whichSportsPlayed();
+
+// *********************
+// End of Array question
+// *********************
 
 // //Question: Do I own a dog?
 // var ownDog = prompt('Okay ' + userName + ': do I own a dog?').toLowerCase();
