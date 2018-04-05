@@ -3,14 +3,14 @@
 var userName = prompt('Hi there! What is your name?');
 
 //this will help keep the user's score on the questions
-var pointsCounter = 0
+//var pointsCounter = 0
 
 
 //First question: Did I play sports in high school?
 var sportGuess = prompt('Hi ' + userName + '! Let\'s try this for the first question: did I play sports in high school?').toLowerCase();
 
 if(sportGuess === 'yes') {
-  pointsCounter += 1;
+  //pointsCounter += 1;
   alert('That\'s right' + userName);
 } else if(sportGuess === 'no') {
 
@@ -26,7 +26,7 @@ var sportsNumber = prompt('So, now you know that I did in fact play sports back 
 sportsNumber = parseInt(sportsNumber);
 
 if (sportsNumber === 3) {
-  pointsCounter += 1;
+  //pointsCounter += 1;
   alert('Good job ' + userName + '! That is correct!');
 } else {
 
@@ -35,7 +35,7 @@ if (sportsNumber === 3) {
 
 console.log(userName + ' answered ' + sportsNumber + '. The right answer was 3.');
 
-Array Question: Can you guess which sports I played?
+//Array Question: Can you guess which sports I played?
 
 var guessAttempts = 6;
 
@@ -66,7 +66,7 @@ while(guessAttempts > 0) {
 var ownDog = prompt('Okay ' + userName + ': do I own a dog?').toLowerCase();
 
 if(ownDog === 'no') {
-  pointsCounter +=1;
+  //pointsCounter +=1;
   alert('That is correct!');
 } else if(ownDog === 'yes') {
 
@@ -83,7 +83,7 @@ var siblingGuess = prompt('Let\'s try this one: how many siblings do I have?');
 siblingGuess = parseInt(siblingGuess);
 
 if (siblingGuess === 4) {
-  pointsCounter += 1;
+  //pointsCounter += 1;
   alert('Way to go ' + userName + '! That is correct!');
 } else {
 
@@ -97,7 +97,7 @@ console.log(userName + ' answered ' + siblingGuess + '. The right answer was 4.'
 var twinTrivia = prompt('Let\'s really test you. Am I a fraternal twin?').toLowerCase();
 
 if(twinTrivia === 'no') {
-  pointsCounter += 1;
+  //pointsCounter += 1;
   alert('That\'s right ' + userName + '! I am actually an IDENTICAL twin.');
 } else if(twinTrivia === 'yes') {
 
@@ -113,7 +113,7 @@ console.log(userName + ' answered ' + twinTrivia + '. The right answer was no.')
 var travelGuess = prompt('Have I traveled to every continent?').toLowerCase();
 
 if(travelGuess === 'no') {
-  pointsCounter += 1;
+  //pointsCounter += 1;
   alert('You\'re right, I haven\'t. But it\'s on my bucket list!');
 } else if(travelGuess === 'yes') {
 
@@ -130,7 +130,7 @@ var numberContinents = prompt('I haven\'t been to every continent, but how many 
 numberContinents = parseInt(numberContinents);
 
 if (numberContinents === 6) {
-  pointsCounter += 1;
+  //pointsCounter += 1;
   alert('Way to go ' + userName + '! That is correct!');
 } else {
 
