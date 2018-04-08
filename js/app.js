@@ -139,109 +139,29 @@ sportsNumberPlayed();
 
 //(Array) Question 7: Can you guess which sports I played?
 
-// function whichSportsPlayed(){
-//   var guessAttempts = 6;
-//   var 
-//   while(guessAttempts > 0) {
-
-//     var whichSports = prompt('Can you guess one of the sports I played?').toLowerCase();
-//     console.log('User guess for a sport played:', whichSports);
-//     guessAttempts--;
-//     console.log('How many guess attempts are left:', guessAttempts);
-//     var sportsPlayed = ['water polo', 'soccer', 'swimming'];
-//     console.log('Array of possible correct answers for sports played:',sportsPlayed);
-//     var userAnswerRight = false;
-//     for(var i = 0; i < sportsPlayed.length; i++) {
-//       if(whichSports === sportsPlayed[i]) {
-//         userAnswerRight = true;
-//       }
-//     }
-//     if(userAnswerRight === true);
-//     pointsCounter += 1;
-//     alert('Correct! The possible answers were: water polo, soccer and swimming (although I know you don\'t technically play swimming.');
-//     userAnswerRight = true;
-//     break;
-//   } if(guessAttempts > 0) {
-//     alert('That\'s not one. Try again.');
-//   } if(guessAttempts === 0){
-//     alert('Well darn. The possible answers were water polo, soccer and swimming. Being from California, I spent a lot of my time outside. And in water apparently.');
-//   }
-// }
-
-var sportsPlayed = ['water polo', 'soccer', 'swimming'];
-var numTries = 6 
-var sportGuess;
-var correctGuess = false
-
-console.log('Guessing sport...');
-alert('Okay ' + userName + '. Let\'s see if you can guess which ones I played.' );
-do {
-  sportGuess = prompt('Name a sport I\'ve played.');
-  numTries--;
-  console.log('Sport guessed was' + sportGuessed + 'guesses remaining', numTries);
-  for (var i = 0; i <sportsPlayed.length; i++){
-    if(sportGuess === sportsPlayed[i]){
-      alert('Way to go ' + userName + '!' + sportPlayed[i] + 'is one of the correct answers! The correct answers were water polo, soccer and swimming.');
-      correctGuess = true;
-      pointsCounter++;
-      break;
+var numGuess = 6;
+while(numGuess > 0) {
+  var whichSports = prompt('Can you guess one of the sports I played?').toLowerCase();
+  console.log('User guess for a sport played:', whichSports);
+  numGuess--;
+  console.log('How many guess attempts are left:', numGuess);
+  var sportsPlayed = ['water polo', 'soccer', 'swimming'];
+  var userAnswer = false;
+  for(var i = 0; i < sportsPlayed.length; i++) {
+    if(whichSports === sportsPlayed[i]) {
+      userAnswer = true;
     }
   }
-  if(correctGuess === false){
-    var incorrectMessage = 'No I didn\'t play' + sportGuess + '.';
-    if(numTries >=1){
-      incorrectMessage += 'Nope, try again. You have ' + numTries + ' guesses left.';
-    } 
-    alert(incorrectMessage);
-  } else {
+  if(userAnswer === true){
+    alert('Correct! The possible answers were: water polo, soccer and swimming, although I know you don\'t technically play swimming.');
+    pointsCounter++;
     break;
-  }  
-} while (numTries > 0);
-console.log('Guessing game completed, the correct guess was', correctGuess);
-// // ************************
-// // Edited code turned into a function for the array question above
-// // ************************
-
-// function whichSportsPlayed(){
-//   var guessAttempts = 6;
-
-//   while(guessAttempts > 0) {
-
-//     var whichSports = prompt('Can you guess one of the sports I played?').toLowerCase();
-//     console.log('User guess for a sport played:', whichSports);
-//     guessAttempts--;
-//     console.log('How many guess attempts are left:', guessAttempts);
-//     var sportsPlayed = ['water polo', 'soccer', 'swimming'];
-//     console.log('Array of possible correct answers for sports played:',sportsPlayed);
-//     var userAnswerRight = false;
-//     for(var i = 0; i < sportsPlayed.length; i++) {
-//       if(whichSports === sportsPlayed[i]) {
-//         userAnswerRight = true;
-//         alert('Correct! The possible answers were: water polo, soccer and swimming (although I know you don\'t technically play swimming).');
-//           break;
-//         } else {guessAttempts --;
-//         alert('That\'s not one. Try again.');}
-//       }
-//   }
-// }
-
-
-// //     }
-// //     if(userAnswerRight === true);
-// //     // pointsCounter += 1;
-// //     break;
-// //   } if(guessAttempts > 0) {
-// //     alert('That\'s not one. Try again.');
-// //   } if(guessAttempts === 0){
-// //     alert('Well darn. The possible answers were water polo, soccer and swimming. Being from California, I spent a lot of my time outside. And in water apparently.');
-// //   }
-// // }
-
-// whichSportsPlayed();
-
-// // *********************
-// // End of Array question
-// // *********************
+  } else if(numGuess > 0) {
+    alert('That\'s not one. Try again.');
+  } else if(numGuess === 0){
+    alert('Well darn. The possible answers were water polo, soccer and swimming. Being from California, I spent a lot of my time outside. And in water apparently.');
+  }
+}
 
 
 // //Guess my lucky number question
