@@ -1,37 +1,57 @@
-body {
-  background-color: rgb(69, 241, 241);
-}
-
+p{ line-height: 20px; }
 h1 {
-  padding: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(255, 0, 212);
-  font-size: 50px;
-  text-align: center;
+    color: black;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 50px;
 }
-
 h2 {
-  padding: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(255, 187, 0);
-  font-size: 30px;
-  text-align: center;
+    color: orange;
+    font-weight: normal;
+    font-size: 25px;
+	  line-height: 2px;
+    margin: 0 0 0 0;
+    padding: 20px
 }
 
-p {
-  padding: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(62, 59, 228);
-  font-size: 20px;
-  text-align: left
+body{
+  font-family: arial; 
+  font-size: 20px; 
+  line-height: 15px; 
+  width: 100%; 
+  margin: 0; 
+  background: #eee;
 }
 
 h4 {
-  padding: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(3, 128, 121);
+  color: orange;
+  font-weight: normal;
   font-size: 25px;
-  text-align: left
+  line-height: 20px;
+  margin: 0 0 0 0;
+  padding: 20px
+}
+
+a{
+	color: black;
+	text-decoration: none;
+}
+
+.box {
+  float: right;
+  width: 250px;
+  margin-left: 10px;
+  margin-right: 225px;
+  margin-top: 100px;
+  padding: 5px;
+ 
+}
+
+#content{
+	margin: 30px 0;
+	background: white;
+	padding: 30px;
+	clear: both;
 }
 
 ul {
@@ -39,9 +59,10 @@ ul {
   margin-left: 20px;
   padding: 20px;
   font-family: Arial, Helvetica, sans-serif;
-  color:  rgb(74, 131, 236);
+  color:  rgb(20, 47, 97);
   font-size: 20px;
   text-align: left;
+  line-height: 20px;
 }
 
 ol {
@@ -52,6 +73,9 @@ ol {
   color:  rgb(153, 24, 103);
   font-size: 20px;
   text-align: left;
+  line-height: 20px;
 }
 
+#content,
+ul li a{ box-shadow: 0px 1px 1px #999; }
 
